@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>支持 · Support — 刷相册 (FlickRoll)</title>
+<meta name="description" content="「刷相册」(FlickRoll) 的支持页面：联系方式与常见问题。Support page for FlickRoll, with contact details and frequently asked questions.">
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff; --fg: #1d1d1f; --muted: #6e6e73; --line: #e5e5e7;
+    --card: #f5f5f7; --accent: #0a7d33; --accent-bg: #f0f9f2; --accent-line: #c3e6cd;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0b0b0c; --fg: #f5f5f7; --muted: #9a9aa0; --line: #2a2a2d;
+      --card: #1a1a1c; --accent: #4ade80; --accent-bg: #10241a; --accent-line: #23543a;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  body {
+    margin: 0; padding: 40px 20px 80px;
+    background: var(--bg); color: var(--fg);
+    font: 16px/1.7 -apple-system, BlinkMacSystemFont, "SF Pro SC", "SF Pro Text",
+          "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  }
+  main { max-width: 720px; margin: 0 auto; }
+  header { padding-bottom: 24px; border-bottom: 1px solid var(--line); margin-bottom: 32px; }
+  .app {
+    display: inline-block; font-size: 13px; font-weight: 600; letter-spacing: .04em;
+    color: var(--accent); background: var(--accent-bg);
+    border: 1px solid var(--accent-line); border-radius: 999px;
+    padding: 4px 12px; margin-bottom: 14px;
+  }
+  h1 { font-size: 30px; line-height: 1.3; margin: 0 0 16px; letter-spacing: -.01em; }
+  h2 { font-size: 20px; line-height: 1.4; margin: 40px 0 12px; padding-top: 8px; }
+  h2:first-of-type { margin-top: 8px; }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 8px; }
+  strong { font-weight: 600; }
+  a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent-line); }
+  a:hover { border-bottom-color: var(--accent); }
+
+  /* 语言切换：纯 CSS :target，无 JavaScript（与隐私政策页同一套机制） */
+  .lang {
+    display: inline-flex; gap: 2px; padding: 3px; border-radius: 10px;
+    background: var(--card); border: 1px solid var(--line); margin: 0;
+  }
+  .lang a {
+    font-size: 14px; font-weight: 600; line-height: 1;
+    padding: 8px 16px; border-radius: 7px; border-bottom: none;
+    color: var(--muted); background: transparent;
+    transition: background .15s ease, color .15s ease;
+  }
+  .lang a:hover { color: var(--fg); border-bottom: none; }
+  .lang .lang-zh { color: var(--fg); background: var(--bg); box-shadow: 0 1px 3px rgba(0,0,0,.10); }
+  body:has(#en:target) .lang .lang-zh { color: var(--muted); background: transparent; box-shadow: none; }
+  body:has(#en:target) .lang .lang-en { color: var(--fg); background: var(--bg); box-shadow: 0 1px 3px rgba(0,0,0,.10); }
+  /* #en 必须排在 #zh 之前，兄弟选择器才成立 */
+  #en { display: none; }
+  #en:target { display: block; }
+  #en:target ~ #zh { display: none; }
+
+  /* 联系方式卡片：Apple 要求 Support URL 指向真实的联系方式，所以让它最显眼 */
+  .contact {
+    background: var(--accent-bg); border: 1px solid var(--accent-line);
+    border-left: 4px solid var(--accent); border-radius: 10px;
+    padding: 18px; margin: 0 0 8px;
+  }
+  .contact p { margin: 0 0 6px; }
+  .contact p:last-child { margin-bottom: 0; }
+  .contact .label { font-size: 14px; color: var(--muted); }
+  .contact .value { font-size: 19px; font-weight: 600; }
+  .qa { margin: 0 0 20px; }
+  .qa .q { font-weight: 600; margin: 0 0 4px; }
+  .qa .a { margin: 0; color: var(--muted); }
+  footer {
+    margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--line);
+    color: var(--muted); font-size: 14px;
+  }
+  footer p { margin: 0 0 6px; }
+  @media print { .lang { display: none; } #en { display: block !important; } }
+</style>
+</head>
+<body>
+<main>
+
+<header>
+  <div class="app">刷相册 · FlickRoll · iPhone</div>
+  <h1>支持 · Support</h1>
+  <nav class="lang" aria-label="Language / 语言">
+    <a class="lang-zh" href="#zh" hreflang="zh-Hans" lang="zh-Hans">中文</a>
+    <a class="lang-en" href="#en" hreflang="en" lang="en">English</a>
+  </nav>
+</header>
+
+<!-- ===================== English ===================== -->
+<!-- 本 section 必须排在中文 section 之前 -->
+<section id="en" lang="en">
+
+  <h2>Contact us</h2>
+  <div class="contact">
+    <p class="label">Email</p>
+    <p class="value"><a href="mailto:1056128378@qq.com">1056128378@qq.com</a></p>
+    <p class="label">We usually reply within a few days. Please tell us your device model and iOS version if you are reporting a problem.</p>
+  </div>
+
+  <h2>Frequently asked questions</h2>
+
+  <div class="qa">
+    <p class="q">Where do deleted photos go?</p>
+    <p class="a">They are moved to the iOS system's "Recently Deleted", not erased. You can bring them back within 30 days from Photos → Albums → Recently Deleted. The app never deletes anything silently: it asks you to confirm, and then iOS asks you one more time.</p>
+  </div>
+
+  <div class="qa">
+    <p class="q">Does the app need an internet connection?</p>
+    <p class="a">No. All image analysis runs on your iPhone. The app contains no network request code, so your photos are never uploaded anywhere.</p>
+  </div>
+
+  <div class="qa">
+    <p class="q">Does it read my entire photo library?</p>
+    <p class="a">It only processes photos inside the time range you pick, and only within the access you grant. If you choose "Selected Photos", the app still works and simply limits itself to what you authorised.</p>
+  </div>
+
+  <div class="qa">
+    <p class="q">Why weren't some similar photos grouped together?</p>
+    <p class="a">Grouping uses burst information and on-device visual similarity, together with capture time and location. Photos taken in different places or at clearly different times are deliberately kept apart, so unrelated shots are not lumped in.</p>
+  </div>
+
+  <div class="qa">
+    <p class="q">Which devices are supported?</p>
+    <p class="a">iPhone running iOS 17.0 or later.</p>
+  </div>
+
+  <div class="qa">
+    <p class="q">Do I need an account?</p>
+    <p class="a">No. There is no account system — no sign-up, no sign-in, no email address required.</p>
+  </div>
+
+  <h2>Privacy</h2>
+  <p>See our <a href="./">privacy policy</a> for full details on how data is handled.</p>
+
+</section>
+
+<!-- ===================== 中文 ===================== -->
+<section id="zh" lang="zh-Hans">
+
+  <h2>联系我们</h2>
+  <div class="contact">
+    <p class="label">邮箱</p>
+    <p class="value"><a href="mailto:1056128378@qq.com">1056128378@qq.com</a></p>
+    <p class="label">通常会在几天内回复。如果是反馈问题，请顺便告诉我们你的机型与 iOS 版本。</p>
+  </div>
+
+  <h2>常见问题</h2>
+
+  <div class="qa">
+    <p class="q">删掉的照片去哪了？</p>
+    <p class="a">被移到 iOS 系统的「最近删除」，不是永久抹掉。30 天内都可以在「照片 → 相簿 → 最近删除」里找回来。App 不会静默删除：先由你确认，iOS 还会再问你一次。</p>
+  </div>
+
+  <div class="qa">
+    <p class="q">需要联网才能用吗？</p>
+    <p class="a">不需要。所有画面分析都在你的 iPhone 上完成，App 不包含任何网络请求代码，照片不会被上传到任何地方。</p>
+  </div>
+
+  <div class="qa">
+    <p class="q">它会读取我全部照片吗？</p>
+    <p class="a">只会处理你选定的时间段内的照片，而且只在你授权的范围内。即使你选择「部分照片」，功能依然可用，只是范围限于你授权的内容。</p>
+  </div>
+
+  <div class="qa">
+    <p class="q">为什么有些相似的照片没被分到一组？</p>
+    <p class="a">分组依据连拍信息与本机的画面相似度，并结合拍摄时间和地点。拍摄地点相差较远、或时间明显不同的照片会被有意分开，避免把不相关的照片混在一起。</p>
+  </div>
+
+  <div class="qa">
+    <p class="q">支持哪些设备？</p>
+    <p class="a">运行 iOS 17.0 或更高版本的 iPhone。</p>
+  </div>
+
+  <div class="qa">
+    <p class="q">需要注册账号吗？</p>
+    <p class="a">不需要。App 没有账号系统，不用注册、不用登录，也不需要填邮箱。</p>
+  </div>
+
+  <h2>隐私</h2>
+  <p>数据如何处理的完整说明，请看我们的<a href="./">隐私政策</a>。</p>
+
+</section>
+
+<footer>
+  <p>刷相册 · FlickRoll — 本页不加载任何外部资源、脚本或统计代码。<br>
+     This page loads no external resources, scripts, or analytics code.</p>
+</footer>
+
+</main>
+</body>
+</html>
