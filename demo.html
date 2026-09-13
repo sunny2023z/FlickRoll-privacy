@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FlickRoll — Review Demo Video</title>
+<title>FlickRoll — Review Demo Videos</title>
 <meta name="robots" content="noindex">
-<meta name="description" content="Screen recording of the FlickRoll iOS app, provided for App Review.">
+<meta name="description" content="Screen recordings of the FlickRoll iOS app, in Chinese and English, provided for App Review.">
 <style>
   :root {
     color-scheme: light dark;
@@ -33,65 +33,135 @@
     color: var(--fg);
     font: 16px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text",
           "PingFang SC", "Helvetica Neue", Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
-  main { width: 100%; max-width: 420px; }
-  h1 { font-size: 20px; line-height: 1.35; margin: 0 0 6px; }
-  p { margin: 0 0 14px; color: var(--muted); font-size: 14px; }
-  hr { border: 0; border-top: 1px solid var(--line); margin: 22px 0; }
+  main { max-width: 720px; margin: 0 auto; }
+  h1 { font-size: 22px; line-height: 1.3; margin: 0 0 6px; }
+  .lede { margin: 0 0 4px; color: var(--muted); font-size: 14px; }
+  .lede-zh { margin: 0 0 28px; color: var(--muted); font-size: 14px; }
+
+  /* 两个视频并排；窄屏（手机）自动堆叠 */
+  .videos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: start;
+  }
+  @media (max-width: 620px) {
+    .videos { grid-template-columns: 1fr; gap: 28px; }
+  }
+
+  figure { margin: 0; }
+  .video-wrap {
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    overflow: hidden;
+    background: #000;
+  }
   video {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 14px;
-    border: 1px solid var(--line);
-    background: #000;
   }
+  figcaption { margin-top: 10px; }
+  .lang-tag {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .04em;
+    padding: 2px 8px;
+    border-radius: 6px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+  .cap-title { font-size: 14px; font-weight: 600; margin: 0 0 2px; }
+  .cap-desc { font-size: 13px; color: var(--muted); margin: 0 0 6px; }
+  .dl { font-size: 13px; color: var(--muted); }
+  .dl a { color: inherit; }
+
+  hr { border: 0; border-top: 1px solid var(--line); margin: 32px 0 24px; }
+
   .meta {
-    margin-top: 12px;
-    padding: 12px 14px;
+    padding: 14px 16px;
     background: var(--card);
     border: 1px solid var(--line);
     border-radius: 12px;
     font-size: 13px;
     color: var(--muted);
   }
-  .meta ul { margin: 6px 0 0; padding-left: 18px; }
-  .meta li { margin: 3px 0; }
+  .meta strong { color: var(--fg); }
+  .meta ul { margin: 8px 0 0; padding-left: 20px; }
+  .meta li { margin: 4px 0; }
+  .meta-zh { margin-top: 14px; }
   a { color: inherit; }
-  .dl { display: inline-block; margin-top: 14px; font-size: 13px; }
 </style>
 </head>
 <body>
 <main>
   <h1>FlickRoll — Review Demo</h1>
-  <p>Screen recording provided for App Review.</p>
+  <p class="lede">Screen recordings provided for App Review. No account or sign-in is needed to use the app.</p>
+  <p class="lede-zh">「刷相册」审核演示录屏。App 无账号系统，无需注册或登录。</p>
 
-  <video id="v" controls playsinline preload="metadata"
-         poster=""
-         src="./flickroll-review-demo.mp4"></video>
+  <div class="videos">
+    <figure>
+      <div class="video-wrap">
+        <video controls playsinline preload="metadata" src="./demo-zh.mp4"></video>
+      </div>
+      <figcaption>
+        <span class="lang-tag">中文 · Chinese</span>
+        <p class="cap-title">完整流程演示</p>
+        <p class="cap-desc">授权 → 选时间段 → 分组整理 → 逐张确认 → 两步删除确认</p>
+        <p class="dl"><a href="./demo-zh.mp4" download>下载视频（MP4，25 MB）</a></p>
+      </figcaption>
+    </figure>
 
-  <a class="dl" href="./flickroll-review-demo.mp4" download>Download the video (MP4)</a>
-
-  <div class="meta">
-    What the recording shows:
-    <ul>
-      <li>Granting photo access (including the "selected photos" option)</li>
-      <li>Choosing a time range, then reviewing photos in groups</li>
-      <li>Swipe gestures: up = to delete, down = keep, sideways = browse</li>
-      <li>The two-step confirmation before anything is deleted</li>
-      <li>The results screen at the end of a session</li>
-    </ul>
+    <figure>
+      <div class="video-wrap">
+        <video controls playsinline preload="metadata" src="./demo-en.mp4"></video>
+      </div>
+      <figcaption>
+        <span class="lang-tag">English</span>
+        <p class="cap-title">Full walkthrough</p>
+        <p class="cap-desc">Permission → pick a time range → group review → swipe each photo → two-step delete confirmation</p>
+        <p class="dl"><a href="./demo-en.mp4" download>Download video (MP4, 11 MB)</a></p>
+      </figcaption>
+    </figure>
   </div>
 
   <hr>
-  <p>
-    No account, no sign-in, and no network access are required to use the app.
-    Everything in this recording happens on-device.
+
+  <div class="meta">
+    <strong>What the recordings show</strong>
+    <ul>
+      <li>Granting photo access — including the "selected photos" option</li>
+      <li>Choosing a time range, then reviewing photos in groups</li>
+      <li>Swipe gestures: sideways to browse, up = to delete, down = keep</li>
+      <li>Undo, and the two-step confirmation before anything is deleted</li>
+      <li>The completion screen and the results view at the end of a session</li>
+    </ul>
+    <div class="meta-zh">
+      <strong>录屏内容</strong>
+      <ul>
+        <li>照片授权（含「部分照片」选项）</li>
+        <li>选择时间段，然后按分组逐组过</li>
+        <li>手势：左右浏览、上滑待删除、下滑保留</li>
+        <li>撤销，以及删除前的两道确认</li>
+        <li>完成页与整理结果页</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="lede" style="margin-top:24px">
+    Everything in these recordings happens on-device. The app has no network request code,
+    so photos never leave the iPhone.
   </p>
-  <p>
+  <p class="lede-zh">
+    录屏中的全部处理都在设备本机完成。App 不含任何网络请求代码，照片不会离开 iPhone。
+  </p>
+
+  <hr>
+  <p class="lede">
     <a href="./index.html">Privacy Policy</a> ·
     <a href="./support.html">Support</a>
   </p>
